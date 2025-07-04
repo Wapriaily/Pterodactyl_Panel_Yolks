@@ -1,4 +1,4 @@
-FROM        registry.cn-shanghai.aliyuncs.com/pterodactyl-images/yolks:debian
+FROM        ccr.ccs.tencentyun.com/wapriaily/yolks:debian
 
 LABEL       author="Manuel Dielacher" maintainer="th3dilli@gmx.at"
 

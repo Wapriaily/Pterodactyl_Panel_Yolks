@@ -1,7 +1,7 @@
 # ---------------------------------------
 # Generic Wine image based on Wine stable
 # ---------------------------------------
-FROM            registry.cn-shanghai.aliyuncs.com/pterodactyl-images/yolks:debian
+FROM            ccr.ccs.tencentyun.com/wapriaily/yolks:debian
 
 LABEL           author="Michael Parker" maintainer="parker@pterodactyl.io"
 LABEL           org.opencontainers.image.licenses=MIT
