@@ -47,9 +47,9 @@ RUN         dpkg --add-architecture i386 \
 
 RUN 		apt-get install -y locales
 RUN 		sed -i -e 's/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
-ENV 		LANG en_US.UTF-8
-ENV 		LANGUAGE en_US:zh_CN
-ENV 		LC_ALL en_US.UTF-8
+ENV 		LANG=en_US.UTF-8
+ENV 		LANGUAGE=en_US:zh_CN
+ENV 		LC_ALL=en_US.UTF-8
 
 ENV         JAVA_HOME=/opt/java/openjdk
 COPY        --from=eclipse-temurin:8-jdk-focal $JAVA_HOME $JAVA_HOME

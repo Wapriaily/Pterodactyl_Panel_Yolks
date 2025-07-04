@@ -28,9 +28,9 @@ RUN         cd /tmp/ \
 
 RUN 		apt-get install -y locales
 RUN 		sed -i -e 's/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
-ENV 		LANG en_US.UTF-8
-ENV 		LANGUAGE en_US:zh_CN
-ENV 		LC_ALL en_US.UTF-8
+ENV 		LANG=en_US.UTF-8
+ENV 		LANGUAGE=en_US:zh_CN
+ENV 		LC_ALL=en_US.UTF-8
 
 USER    container
 ENV     USER=container HOME=/home/container
