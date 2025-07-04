@@ -36,4 +36,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com/wapriaily/yolks:bun_${{ matrix.tag }}
+            ccr.ccs.tencentyun.com/wapriaily/yolks:bun_${{ matrix.tag }}

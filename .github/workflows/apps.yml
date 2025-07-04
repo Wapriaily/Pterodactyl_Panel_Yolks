@@ -28,7 +28,7 @@ jobs:
 
       - uses: docker/login-action@v3
         with:
-          registry: crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com
+          registry: ccr.ccs.tencentyun.com
           username: ${{ secrets.REPOSITORY_OWNER }}
           password: ${{ secrets.REGISTRY_TOKEN }}
 
@@ -39,4 +39,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com/wapriaily/apps:${{ matrix.app }}
+            ccr.ccs.tencentyun.com/wapriaily/apps:${{ matrix.app }}

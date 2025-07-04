@@ -33,7 +33,7 @@ jobs:
           buildkitd-flags: --debug
       - uses: docker/login-action@v3
         with:
-          registry: crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com
+          registry: ccr.ccs.tencentyun.com
           username: ${{ secrets.REPOSITORY_OWNER }}
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v5
@@ -43,7 +43,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com/wapriaily/games:${{ matrix.game }}
+            ccr.ccs.tencentyun.com/wapriaily/games:${{ matrix.game }}
   pushAll:
     name: "games_All:${{ matrix.game }}"
     runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
           buildkitd-flags: --debug
       - uses: docker/login-action@v3
         with:
-          registry: crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com
+          registry: ccr.ccs.tencentyun.com
           username: ${{ secrets.REPOSITORY_OWNER }}
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v5
@@ -74,4 +74,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            crpi-r97dq9ppddpijnzt.cn-chengdu.personal.cr.aliyuncs.com/wapriaily/games:${{ matrix.game }}
+            ccr.ccs.tencentyun.com/wapriaily/games:${{ matrix.game }}
